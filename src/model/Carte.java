@@ -1,4 +1,7 @@
-package src;
+package src.model;
+
+import src.model.Couleur;
+import src.model.Valeur;
 
 public class Carte {
 
