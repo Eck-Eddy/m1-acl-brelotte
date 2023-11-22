@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Tour restant :">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="457.0" layoutY="14.0" text="Score :">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="516.0" layoutY="44.0" text="points">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="tirerCartes" layoutX="254.0" layoutY="270.0" mnemonicParsing="false" onAction="#tirageCarte" text="Tirer cartes" />
+      <Button fx:id="abandonPartie" layoutX="507.0" layoutY="355.0" mnemonicParsing="false" onAction="#abandonnerPartie" text="Abandon" />
+      <Label fx:id="pointTour" layoutX="479.0" layoutY="46.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="scoreTotal" layoutX="530.0" layoutY="19.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="nbTour" layoutX="143.0" layoutY="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="caseCarte1" fitHeight="150.0" fitWidth="200.0" layoutX="148.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/dos-bleu.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="caseCarte2" fitHeight="150.0" fitWidth="200.0" layoutX="347.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/dos-bleu.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

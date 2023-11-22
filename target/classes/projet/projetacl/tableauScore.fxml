@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.projetacl.tableauScoreController">
+    <children>
+        <TableView fx:id="joueurs" layoutX="143.0" layoutY="81.0" prefHeight="239.0" prefWidth="250.0">
+            <columns>
+                <TableColumn fx:id="pseudoCol" prefWidth="75.0" text="PSEUDO" />
+                <TableColumn fx:id="pointCol" prefWidth="75.0" text="POINT" />
+            </columns>
+        </TableView>
+        <Button fx:id="RetourMenu" layoutX="521.0" layoutY="355.0" mnemonicParsing="false" onAction="#retourMenu" text="Retour" />
+    </children>
+</AnchorPane>

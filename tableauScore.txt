@@ -1,0 +1,13 @@
+arthur,18
+ar,56
+art,9
+a,44
+aa,7
+aaaa,-8
+aaaaaaaaaa,20
+aaa,28
+art,4
+a,39
+aa,-4
+aaaa,35
+a,39

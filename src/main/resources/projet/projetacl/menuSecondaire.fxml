@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.projetacl.menuSecondaireController">
+    <children>
+        <Label layoutX="194.0" layoutY="116.0" text="Entrez votre pseudo">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="saisiePseudo" layoutX="207.0" layoutY="185.0" />
+        <Button fx:id="validerSaisiePseudo" layoutX="267.0" layoutY="244.0" mnemonicParsing="false" onAction="#validerPseudo" text="Valider" />
+        <Button fx:id="retourMenuPrincipal" layoutX="14.0" layoutY="355.0" mnemonicParsing="false" onAction="#retourPrincipal" text="Retour" />
+        <Button fx:id="quitterMenuSecondaire" layoutX="519.0" layoutY="355.0" mnemonicParsing="false" onAction="#quitterSecondaire" text="Quitter" />
+    </children>
+</AnchorPane>
