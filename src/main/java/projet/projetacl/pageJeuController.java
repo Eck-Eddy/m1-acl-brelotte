@@ -70,10 +70,10 @@ public class pageJeuController implements Initializable {
 
     public void tirageCarte(ActionEvent event) throws IOException {
 
-        if(game.getNbTour()>1)
+        if(game.getNbTour()>0)
         {
             ArrayList<Carte> tirage = game.getPaquetCarte().tirage2Cartes();
-            game.calculPoint(tirage);
+            game.calculPoint(tirage,game);
             game.setNbTour(game.getNbTour()-1);
             rafraichirAffichage();
 
