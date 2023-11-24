@@ -1,6 +1,7 @@
 package src.model;
 
 import java.util.ArrayList;
+import CORRegles.*;
 
 public class Jeu {
     private int nbTour;
@@ -49,30 +50,22 @@ public class Jeu {
         this.pointTour = point;
     }
 
-    public void calculPoint(ArrayList<Carte> cartetire)
+    public void calculPoint(ArrayList<Carte> cartetire, Jeu jeu)
     {
         Carte c1 = cartetire.get(0);
         Carte c2 = cartetire.get(1);
         int n = 0;
         setPointTour(0);
-        if (c1.getValeur() != c2.getValeur() && c1.getColor() != c2.getColor())
-        {
-            n = c1.getValeur().getValeur()+c2.getValeur().getValeur();
-            setPointTour(0+n);
-            this.joueur.setPoints(this.joueur.getPoints()+n);
-        }
-        else if (c1.getValeur() == c2.getValeur() && c1.getColor() != c2.getColor())
-        {
-            n = c1.getValeur().getValeur()+c2.getValeur().getValeur();
-            setPointTour(0-n);
-            this.joueur.setPoints(this.joueur.getPoints()-n);
-        }
-        else if (c1.getValeur() == c2.getValeur() && c1.getColor() == c2.getColor())
-        {
-            n = c1.getValeur().getValeur()+c2.getValeur().getValeur();
-            setPointTour(0-2*n);
-            this.joueur.setPoints(this.joueur.getPoints()-(2*n));
-        }
+        // Créez une chaîne de gestionnaires
+        Expert CouleurEtValeurDiffHandler = new CouleurEtValeurDiffHandler(jeu);
+        Expert MemeValeurDiffHandler = new MemeValeurHandler(jeu);
+        Expert MemeValeurEtMemeCouleurHandler = new MemeValeurEtMemeCouleurHandler(jeu);
+
+        CouleurEtValeurDiffHandler.setNextHandler(MemeValeurDiffHandler);
+        MemeValeurDiffHandler.setNextHandler(MemeValeurEtMemeCouleurHandler);
+
+        // Commencer le traitement avec le premier gestionnaire de la chaîne
+        CouleurEtValeurDiffHandler.handle(cartetire);
 
     }
 
