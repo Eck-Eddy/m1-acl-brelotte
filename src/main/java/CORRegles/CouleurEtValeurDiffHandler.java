@@ -7,8 +7,8 @@ import src.model.Jeu;
 import src.model.Joueur;
 
 public class CouleurEtValeurDiffHandler extends ExpertCOR {
-    Joueur joueur;
-    Jeu jeu;
+    private Joueur joueur;
+    private Jeu jeu;
     public CouleurEtValeurDiffHandler(Jeu jeu) {
         this.joueur = jeu.getJoueur();
         this.jeu = jeu;
