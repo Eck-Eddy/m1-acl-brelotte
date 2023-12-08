@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class MemeValeurEtMemeCouleurHandler extends ExpertCOR {
 
-    Joueur joueur;
-    Jeu jeu;
+    private Joueur joueur;
+    private Jeu jeu;
     public MemeValeurEtMemeCouleurHandler(Jeu jeu) {
         this.joueur = jeu.getJoueur();
         this.jeu = jeu;
