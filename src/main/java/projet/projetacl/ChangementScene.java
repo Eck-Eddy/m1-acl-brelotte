@@ -12,10 +12,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Classe qui contient les fonctions utiles pour effectuer les changements de scènes
+ */
 public class ChangementScene {
 
     DataSingleton data = DataSingleton.getInstance();
 
+    /**
+     * procédure qui gère la fermeture de l'application
+     * @param bouton
+     */
     public void quitterJeu(Button bouton){
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -31,6 +38,13 @@ public class ChangementScene {
 
     }
 
+    /**
+     * Procédure qui gère le changement de scène
+     * @param bouton
+     * @param pageVoulu
+     * @param titrePage
+     * @throws IOException
+     */
     public void changerScene(Button bouton, String pageVoulu, String titrePage) throws IOException {
 
         Stage stage = (Stage) bouton.getScene().getWindow();
@@ -43,6 +57,14 @@ public class ChangementScene {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * Procédure qui gère le changement de scène avec le controller spécifié
+     * @param bouton
+     * @param pageVoulu
+     * @param titrePage
+     * @param obj
+     * @throws IOException
+     */
     //ne pas oublier d'enlever le controller dans le FXML
     public void changerSceneControllerSpecifier(Button bouton, String pageVoulu, String titrePage, Object obj) throws IOException
     {
@@ -57,6 +79,14 @@ public class ChangementScene {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * procédure qui gère le changement de scène
+     * @param bouton
+     * @param pageVoulu
+     * @param titrePage
+     * @param label
+     * @throws IOException
+     */
     public void changerScene2(Button bouton, String pageVoulu, String titrePage, Label label) throws IOException {
 
         data.setScoreFinal(label.getText());
@@ -71,7 +101,11 @@ public class ChangementScene {
     }
 
 
-
+    /**
+     * Procédure qui gère l'abandon
+     * @param bouton
+     * @throws IOException
+     */
     public void abandon(Button bouton) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Abandon");
@@ -83,6 +117,12 @@ public class ChangementScene {
         }
     }
 
+    /**
+     * procédure qui gère l'affichae dans une fenêtre indépendante
+     * @param direction
+     * @param titre
+     * @throws IOException
+     */
     public void popUp(String direction,String titre) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(direction+".fxml"));
 

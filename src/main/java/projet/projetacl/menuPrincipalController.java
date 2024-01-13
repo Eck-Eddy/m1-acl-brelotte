@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * classe qui gère le menu principal
+ */
 public class menuPrincipalController {
 
     @FXML
@@ -26,6 +29,11 @@ public class menuPrincipalController {
     private AnchorPane scenePane;
 
 
+    /**
+     * procédure qui gère le lancement du jeu
+     * @param event
+     * @throws IOException
+     */
     @FXML
     protected void commencer(ActionEvent event) throws IOException {
         ChangementScene controller = new ChangementScene();
@@ -33,6 +41,11 @@ public class menuPrincipalController {
 
     }
 
+    /**
+     * procédure qui gère le clic de l'utilisateur sur le bouton d'affichage pour le tableau des scores
+     * @param event
+     * @throws IOException
+     */
     @FXML
     protected void afficheTableau(ActionEvent event) throws IOException {
         ChangementScene controller = new ChangementScene();
@@ -41,6 +54,10 @@ public class menuPrincipalController {
     }
 
 
+    /**
+     * procédure pour quitter l'application
+     * @param event
+     */
     @FXML
     protected void quitterMenu(ActionEvent event) {
         ChangementScene controller = new ChangementScene();

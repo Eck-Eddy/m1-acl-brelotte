@@ -1,21 +1,42 @@
 package src.model;
 
-import javafx.scene.image.Image;
-import src.model.Couleur;
-import src.model.Valeur;
-
-import java.io.IOException;
-import java.net.URL;
-
+/**
+ * Classe Carte qui représente une carte de jeu
+ */
 public class Carte {
 
+    /**
+     * nom que la carte porte
+     */
     private String nom;
-    private final Couleur color;
-    private final Valeur valeur;
-    private final Categorie categorie;
-    private final int nbPoint;
-    private Image image;
 
+    /**
+     * Couleur de la carte
+     */
+    private final Couleur color;
+
+    /**
+     * Valeur de la carte
+     */
+    private final Valeur valeur;
+
+    /**
+     * Catégorie de la carte
+     */
+    private final Categorie categorie;
+
+    /**
+     * Nombre de point de la carte
+     */
+    private final int nbPoint;
+
+    /**
+     * Constructeur d'une carte
+     * @param name nom de la carte
+     * @param color couleur de la carte
+     * @param cat catégorie de la carte
+     * @param val valeur de la carte
+     */
     public Carte (String name,final Couleur color,final Categorie cat, final Valeur val)
     {
         setNom(name);
@@ -27,6 +48,11 @@ public class Carte {
     }
 
 
+    /**
+     * Permet de modifier le nom de la carte
+     * @param name nom de la carte
+     * @throws IllegalArgumentException si le nom donné n'est pas valide
+     */
     public void setNom(String name) {
         if (name == null || name.trim().isEmpty())
         {
@@ -39,30 +65,56 @@ public class Carte {
         }
     }
 
+    /**
+     * donne le nom de la carte
+     * @return le nom de la carte
+     */
     public String getNom(){return nom;}
 
+    /**
+     * Donne la couleur de la carte
+     * @return la couleur de la carte
+     */
     public Couleur getColor()
     {
         return color;
     }
 
+    /**
+     * Donne la valeur de la carte
+     * @return la valeur de la carte
+     */
     public Valeur getValeur()
     {
         return valeur;
     }
 
+    /**
+     * Donne le nombre de point de la carte
+     * @return le nombre de point de la carte
+     */
     public int getNbPoint()
     {
         return nbPoint;
     }
 
+    /**
+     * Donne la catégorie de la carte
+     * @return le catégorie de la carte
+     */
     public Categorie getCategorie(){return  categorie;}
 
+    /**
+     * Permet de mettre une carte en chaine de caractère
+     * @return couleur+valeur+catégorie+nbPoints
+     */
     @Override
     public String toString() {
-        return "Carte{" +
+        return "Carte{ Nom = "+nom +
                 "color=" + color +
                 ", valeur=" + valeur +
+                ", categorie=" + categorie+
+                ", nbPoint= "+ nbPoint+
                 '}';
     }
 }

@@ -12,7 +12,6 @@ public class LancementApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        //Parent root = FXMLLoader.load(getClass().getResource("menuPrincipal.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("menuPrincipal.fxml"));
         stage.setTitle("Brelotte!");
         stage.setScene(new Scene(root,600,400));

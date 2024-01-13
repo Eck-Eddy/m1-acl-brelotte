@@ -15,6 +15,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
+/**
+ * classe qui gère le tableaud'affichage des scores
+ */
 public class tableauScoreController implements Initializable{
 
     final String SEPARATEUR = ",";
@@ -33,6 +36,11 @@ public class tableauScoreController implements Initializable{
     private TableColumn<Joueur, String> pseudoCol;
 
 
+    /**
+     * procédure qui initialise le tableau
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         pointCol.setCellValueFactory(new PropertyValueFactory<Joueur, Integer>("points"));
@@ -40,6 +48,8 @@ public class tableauScoreController implements Initializable{
         setupTable();
     }
 
+    /**
+     * procédure qui créé la table à l'aide du fichier tableauScore.txt   */
     private void setupTable(){
 
         try {
@@ -65,6 +75,11 @@ public class tableauScoreController implements Initializable{
         }
     }
 
+    /**
+     * procédure qui gère l'action de retourner au menu principal
+     * @param event
+     * @throws IOException
+     */
     public void retourMenu(ActionEvent event) throws IOException {
         ChangementScene controller = new ChangementScene();
         controller.changerScene(RetourMenu,"menuPrincipal","Menu Principal");

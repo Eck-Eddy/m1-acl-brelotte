@@ -16,6 +16,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * classe qui gère la page de jeu
+ */
 public class pageJeuController implements Initializable {
 
     private Jeu game;
@@ -44,6 +47,11 @@ public class pageJeuController implements Initializable {
     @FXML
     private ImageView caseCarte2;
 
+    /**
+     * initialise la page de jeu
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         pointTour.setText(String.valueOf(pointDuTour));
@@ -52,6 +60,10 @@ public class pageJeuController implements Initializable {
 
     }
 
+    /**
+     * Consructeur d'une page de jeu
+     * @param game
+     */
     public pageJeuController(Jeu game)
     {
         this.game = game;
@@ -61,6 +73,9 @@ public class pageJeuController implements Initializable {
 
     }
 
+    /**
+     * procédure ppour rafraîchir la page de jeu
+     */
     public void rafraichirAffichage()
     {
         pointTour.setText(String.valueOf(game.getPointTour()));
@@ -68,6 +83,11 @@ public class pageJeuController implements Initializable {
         nbTour.setText(String.valueOf(game.getNbTour()));
     }
 
+    /**
+     * Procédure qui effectue le tirage de carte lorsque l'utilisateur clique sur le bouton
+     * @param event
+     * @throws IOException
+     */
     public void tirageCarte(ActionEvent event) throws IOException {
 
         if(game.getNbTour()>0)
@@ -85,6 +105,7 @@ public class pageJeuController implements Initializable {
 
             System.out.println(tirage.get(0).getNom());
             System.out.println(tirage.get(1).getNom());
+
         }
         else
         {
@@ -95,13 +116,17 @@ public class pageJeuController implements Initializable {
 
             ChangementScene controller = new ChangementScene();
             controller.changerScene2(tirerCartes,"finPartie","Menu de fin de partie",scoreTotal);
-            //controller.changerScene(tirerCartes,"finPartie","Menu de fin de partie");
-            //controller.changerSceneControllerSpecifier(tirerCartes,"finPartie","Menu de fin de partie",game);
+
         }
 
 
     }
 
+    /**
+     * procédure qui gère l'abandon de la partie lorsque l'utilistauer clique dessus
+     * @param event
+     * @throws IOException
+     */
     public void abandonnerPartie(ActionEvent event) throws IOException {
         ChangementScene controller = new ChangementScene();
         controller.abandon(abandonPartie);

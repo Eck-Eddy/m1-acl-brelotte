@@ -7,5 +7,7 @@ module projet.projetacl {
     opens src.model to javafx.fxml;
     exports projet.projetacl;
     exports src.model;
+    exports test;
+    opens test to javafx.fxml;
 
 }

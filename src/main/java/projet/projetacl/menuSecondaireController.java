@@ -13,6 +13,9 @@ import src.model.Joueur;
 
 import java.io.IOException;
 
+/**
+ * classe qui gère le menu secondaire
+ */
 public class menuSecondaireController {
 
     @FXML
@@ -26,7 +29,12 @@ public class menuSecondaireController {
 
     @FXML
     private TextField saisiePseudo;
-    
+
+    /**
+     * procédure qui gère la validation du pseudonyme
+     * @param event
+     * @throws IOException
+     */
     public void validerPseudo(ActionEvent event) throws IOException {
 
         try
@@ -49,12 +57,21 @@ public class menuSecondaireController {
 
     }
 
+    /**
+     * procèdure qui gère le retour au menu principal
+     * @param event
+     * @throws IOException
+     */
     public void retourPrincipal(ActionEvent event) throws IOException {
         ChangementScene controller = new ChangementScene();
         controller.changerScene(retourMenuPrincipal,"menuPrincipal","Menu Principal");
 
     }
 
+    /**
+     * procèdure qui fait quitter le menu secondaire
+     * @param event
+     */
     public void quitterSecondaire(ActionEvent event) {
 
         ChangementScene controller = new ChangementScene();
