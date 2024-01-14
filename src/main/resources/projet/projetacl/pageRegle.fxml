@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label layoutX="260.0" layoutY="36.0" prefHeight="35.0" prefWidth="81.0" text="Règles:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="87.0" prefHeight="35.0" prefWidth="594.0" text="-la partie s'effectue en faisant 5 tirages de 2 cartes ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="130.0" prefHeight="27.0" prefWidth="453.0" text="-le but est d'avoir le moins de points possible">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="164.0" prefHeight="27.0" prefWidth="346.0" text="-le calcul des points se fait de cette façon :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="200.0" prefHeight="27.0" prefWidth="645.0" text="*si dépareillées en valeur et en couleur, la somme des valeurs est ajoutée">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="228.0" text="*si même valeur mais couleur différente, la somme des valeurs est soustraite au score">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="255.0" text="*si même valeur et même coueleur, le double de la somme est soustrait">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="298.0" text="Valeur des cartes : as(11pts), 10(10pts), roi(4pts), dame(3pts), valet(2pts)  ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="325.0" text="Pour 9, 8, 7 : 0pts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -16,6 +17,7 @@
         </Label>
         <Button fx:id="commencerPartie" layoutX="250.0" layoutY="185.0" mnemonicParsing="false" onAction="#commencer" text="Commencer" />
         <Button fx:id="afficheTableauRecord" layoutX="239.0" layoutY="244.0" mnemonicParsing="false" onAction="#afficheTableau" text="Tableau Record" />
-        <Button fx:id="quitterMenuPrincipal" layoutX="510.0" layoutY="345.0" mnemonicParsing="false" onAction="#quitterMenu" text="quitter" />
+        <Button fx:id="quitterMenuPrincipal" layoutX="510.0" layoutY="345.0" mnemonicParsing="false" onAction="#quitterMenu" text="quitter" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="25.0" />
+      <Button fx:id="ReglesJeu" layoutX="14.0" layoutY="345.0" mnemonicParsing="false" onAction="#afficherRegle" text="Règles" />
     </children>
 </AnchorPane>

@@ -132,5 +132,12 @@ public class pageJeuController implements Initializable {
         controller.abandon(abandonPartie);
     }
 
+    @FXML
+    protected void afficherRegle(ActionEvent event) throws IOException {
+        ChangementScene controller = new ChangementScene();
+        controller.popUp("pageRegle","Affichage des règles");
+
+    }
+
 
 }

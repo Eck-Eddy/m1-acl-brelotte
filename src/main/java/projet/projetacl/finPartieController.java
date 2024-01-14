@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import src.model.Jeu;
 
 import java.io.IOException;
 import java.net.URL;
@@ -69,6 +68,7 @@ public class finPartieController implements Initializable {
         ChangementScene controller = new ChangementScene();
         controller.changerScene(rejouerNewPartie,"menuSecondaire","Menu Secondaire");
     }
+
 
 
 }

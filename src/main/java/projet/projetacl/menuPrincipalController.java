@@ -3,12 +3,8 @@ package projet.projetacl;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -23,6 +19,8 @@ public class menuPrincipalController {
     private Button afficheTableauRecord;
     @FXML
     private Button commencerPartie;
+    @FXML
+    private Button ReglesJeu;
 
     @FXML
 
@@ -65,5 +63,11 @@ public class menuPrincipalController {
 
     }
 
+    @FXML
+    protected void afficherRegle(ActionEvent event) throws IOException {
+        ChangementScene controller = new ChangementScene();
+        controller.popUp("pageRegle","Affichage des règles");
+
+    }
 }
 

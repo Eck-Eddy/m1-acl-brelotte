@@ -50,5 +50,6 @@
             <Image url="@Images/dos-bleu.png" />
          </image>
       </ImageView>
+      <Button fx:id="RegleJeu" layoutX="14.0" layoutY="355.0" mnemonicParsing="false" onAction="#afficherRegle" text="Règles" />
     </children>
 </AnchorPane>

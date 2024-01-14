@@ -15,6 +15,8 @@ public class LancementApplication extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("menuPrincipal.fxml"));
         stage.setTitle("Brelotte!");
         stage.setScene(new Scene(root,600,400));
+        stage.setMinHeight(400);
+        stage.setMinWidth(600);
         stage.show();
     }
 
