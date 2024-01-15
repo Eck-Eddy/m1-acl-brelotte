@@ -40,7 +40,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="255.0" text="*si même valeur et même coueleur, le double de la somme est soustrait">
+      <Label layoutX="14.0" layoutY="255.0" text="*si même valeur et même couleur, le double de la somme est soustrait">
          <font>
             <Font size="18.0" />
          </font>
