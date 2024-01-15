@@ -68,6 +68,7 @@ public class menuPrincipalController {
         ChangementScene controller = new ChangementScene();
         controller.popUp("pageRegle","Affichage des règles");
 
+
     }
 }
 

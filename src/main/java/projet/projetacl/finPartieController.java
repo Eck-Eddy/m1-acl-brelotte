@@ -37,7 +37,7 @@ public class finPartieController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        nbPointFinal.setText(data.getScoreFinal());
+        nbPointFinal.setText(data.getScoreFinal()+" points");
     }
 
     /**

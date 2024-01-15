@@ -127,7 +127,17 @@ public class ChangementScene {
         Parent root = FXMLLoader.load(getClass().getResource(direction+".fxml"));
 
         Stage stage = new Stage();
-        Scene scene = new Scene(root,500,400);
+        int width,height;
+        if (direction == "tableauScore")
+        {
+            width=500;
+        }
+        else
+        {
+            width=700;
+        }
+        height=400;
+        Scene scene = new Scene(root,width,height);
         stage.setTitle(titre);
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
